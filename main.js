@@ -44,13 +44,6 @@ function name1() {
     nameText.innerHTML = nameSpace
 }
 
-
-nameButton.addEventListener("click", function(e) {
-    const name = prompt("Pet name?")
-
-    document.getElementById("nameSpace").innerHTML = name;
-});
-
 // this is my getHungry function so the pet's hunger level will get higher every 10 seconds!  
 const getHungry = () => {
     let hungerLevel = document.querySelector("#hungerLevel")
@@ -93,3 +86,45 @@ const timeAge = () => {
    
 }
 setInterval(timeAge, 5000);
+
+// the tamagotchiIsDead function is to run to end the game and letting hte player know they lost.
+const tamagotchiIsDead = () => {
+    if(tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10 || tamagotchi.boredom >= 10){
+        alert(`Your pet has died`)
+      
+    
+
+    }
+}
+
+// Button functions!
+
+
+const clickFeed = () => {
+    tamagotchi.clickFeed()
+    document.querySelector('#hungerLevel').innerText = tamagotchi.hunger
+}
+
+const clickSleep = () => {
+    tamagotchi.clickSleep()
+    document.querySelector('#sleepyLevel').innerText = tamagotchi.sleepiness
+}
+
+const clickPlay = () => {
+    tamagotchi.clickPlay()
+    document.querySelector('#boredomLevel').innerText = tamagotchi.boredom
+}
+
+
+
+// these are the event listners for the buttons I created 
+
+document.getElementById('feed').addEventListener('click', clickFeed)
+document.getElementById('light').addEventListener('click',clickSleep)
+document.getElementById('play').addEventListener('click', clickPlay)
+
+nameButton.addEventListener("click", function(e) {
+    const name = prompt("Pet name?")
+
+    document.getElementById("nameSpace").innerHTML = name;
+});
