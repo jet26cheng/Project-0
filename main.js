@@ -53,7 +53,7 @@ const getHungry = () => {
     tamagotchiIsDead()
    
 }
-setInterval(getHungry,10000);
+const getHungryInterval = setInterval(getHungry,10000);
 
 // this is my getBored function so the pet's boredom level is getting higher every 10 seconds! 
 const getBored = () => {
@@ -63,7 +63,7 @@ const getBored = () => {
 
     tamagotchiIsDead()
 }
-setInterval(getBored, 10000);
+const getBoredInterval = setInterval(getBored, 10000);
 
 // this is my getSleepy function so the pet's boredom level is getting higher every 10 seconds! 
 const getSleepy = () => {
@@ -73,7 +73,7 @@ const getSleepy = () => {
 
     tamagotchiIsDead()
 }
-setInterval(getSleepy, 10000);
+const getSleepyInterval =setInterval(getSleepy, 10000);
 
 
 
@@ -85,16 +85,22 @@ const timeAge = () => {
 
    
 }
-setInterval(timeAge, 5000);
+const ageInterval = setInterval(timeAge, 5000);
 
 // the tamagotchiIsDead function is to run to end the game and letting hte player know they lost.
 const tamagotchiIsDead = () => {
-    if(tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10 || tamagotchi.boredom >= 10){
+    if(tamagotchi.hunger > 10 || tamagotchi.sleepiness > 10 || tamagotchi.boredom > 10){
+        
+        document.body.querySelector("img").setAttribute("src", "./images/Crying Huskie.gif")
+        
+        clearInterval(getHungryInterval)
+        clearInterval(getSleepyInterval)
+        clearInterval(getBoredInterval)
         alert(`Your pet has died`)
       
-    
-
+        
     }
+    
 }
 
 // Button functions!
@@ -103,16 +109,22 @@ const tamagotchiIsDead = () => {
 const clickFeed = () => {
     tamagotchi.clickFeed()
     document.querySelector('#hungerLevel').innerText = tamagotchi.hunger
+
+    document.body.querySelector("img").setAttribute("src", "./images/eating husky.gif")
 }
 
 const clickSleep = () => {
     tamagotchi.clickSleep()
     document.querySelector('#sleepyLevel').innerText = tamagotchi.sleepiness
+
+    document.body.querySelector("img").setAttribute("src", "./images/sleepying husky.gif")
 }
 
 const clickPlay = () => {
     tamagotchi.clickPlay()
     document.querySelector('#boredomLevel').innerText = tamagotchi.boredom
+
+    document.body.querySelector("img").setAttribute("src", "./images/playing husky.gif")
 }
 
 
