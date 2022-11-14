@@ -53,7 +53,7 @@ const getHungry = () => {
     tamagotchiIsDead()
    
 }
-const getHungryInterval = setInterval(getHungry,10000);
+const getHungryInterval = setInterval(getHungry,5000);
 
 // this is my getBored function so the pet's boredom level is getting higher every 10 seconds! 
 const getBored = () => {
@@ -63,7 +63,7 @@ const getBored = () => {
 
     tamagotchiIsDead()
 }
-const getBoredInterval = setInterval(getBored, 10000);
+const getBoredInterval = setInterval(getBored, 5000);
 
 // this is my getSleepy function so the pet's boredom level is getting higher every 10 seconds! 
 const getSleepy = () => {
@@ -73,7 +73,7 @@ const getSleepy = () => {
 
     tamagotchiIsDead()
 }
-const getSleepyInterval =setInterval(getSleepy, 10000);
+const getSleepyInterval =setInterval(getSleepy, 5000);
 
 
 
@@ -85,7 +85,7 @@ const timeAge = () => {
 
    
 }
-const ageInterval = setInterval(timeAge, 5000);
+const ageInterval = setInterval(timeAge, 2500);
 
 // the tamagotchiIsDead function is to run to end the game and letting hte player know they lost.
 const tamagotchiIsDead = () => {
