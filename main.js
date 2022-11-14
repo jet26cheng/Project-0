@@ -32,6 +32,8 @@ class Tamagotchi {
 
 }
 
+
+
 const tamagotchi = new Tamagotchi;
 const nameButton = document.getElementById("name");
 const nameText = document.getElementById("nameSpace");
@@ -43,6 +45,9 @@ const sleepyLevel = document.querySelector('#sleepyLevel')
 function name1() {
     nameText.innerHTML = nameSpace
 }
+
+
+
 
 // this is my getHungry function so the pet's hunger level will get higher every 10 seconds!  
 const getHungry = () => {
