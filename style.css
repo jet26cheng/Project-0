@@ -1,0 +1,38 @@
+body {  
+    background-color: gray;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+div {
+    color: white;
+    text-align: center;
+}
+
+main {
+    padding: 20px ;
+    text-align: center;
+}
+form {
+    text-align: center;
+    color: white;
+    margin: 40px;
+}
+
+nameSpace {
+    text-align: center;
+    color: white;
+}
+nameButton {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+
+}
+
+tamagotchi-image {
+    
+}
